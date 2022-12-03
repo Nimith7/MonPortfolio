@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nicolas CALVI</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- SMOOTH SCROLL -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("a").on('click', function (event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
+                    var hash = this.hash;
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 1300, function () {
+                        window.location.hash = hash;
+                    });
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="landing_page flex-container">
+        <!-- NAV BARRE -->
+        <div class="nav_bar">
+            <ul>
+                <li><a class="active" href="#about">Qui suis-je ?</a></li>
+                <li><a href="#cv">Curriculum Vitae</a></li>
+                <li><a href="#projets">Projets</a></li>
+                <li><a href="#contact">Contact</a></li>
+
+            </ul>
+        </div>
+
+        <!-- ABOUT ME -->
+        <div class="main_page row">
+            <div class="left_side">
+                <div class="name title_section">
+                    <h1>Nicolas CALVI</h1>
+                </div>
+                <div class="bio">
+                    <p>
+                        J'ai 21 ans, je suis diplômé d'un BTS en Systèmes Numériques Informatiques & Réseaux.
+                        <br>
+                        Mon objectif professionnel est de devenir Developpeur Web !
+                    </p>
+                </div>
+                <div class="social_media ">
+                    <a class="icons" href="https://www.linkedin.com/in/nicolas-calvi-8a305821a/" target="_blank"><i
+                            class="fa-brands fa-linkedin-in"></i></a>
+                    <a class="icons" href="https://github.com/Nimith7" target="_blank"><i
+                            class="fa-brands fa-github"></i></a>
+                    <a class="icons" href="#contact"><i class="fa-solid fa-envelope"></i></a>
+                    <a class="icons" href="https://www.instagram.com/nimith_7/" target="_blank"><i
+                            class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="right_side row">
+                <div class="image">
+                    <div class="frame">
+                        <img class="pdp" src="./src/images/escalier_nimith_2.2.jpeg"
+                            alt="Nimith en bas des escalier complètement KO">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CV -->
+        <div class="main_page" id="cv">
+            <div class="title_section">
+                <h3>Curriculum Vitae</h3>
+            </div>
+
+            <div>
+                <div class="bio" id="etudes">
+                    <h2>Mes Études</h2>
+                </div>
+                <div class="bio" id="skills">
+                    <h2>Mes Compétences</h2>
+                </div>
+                <div class="bio" id="xp">
+                    <h2>Mes Expériences Professionnels</h2>
+                </div>
+            </div>
+        </div>
+
+        <!-- CONTACT -->
+        <div class="main_page" id="contact">
+            <div class="title_section">
+                <h3>CONTACT</h3>
+            </div>
+
+            <div class="contact_section">
+                <video class="video_mp4" id="background_video" autoplay loop>
+                    <source src="./src/images/bg_lifestyle.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+            </div>
+
+            <div class="contact_form row">
+                <div>
+                    <h2>Remplissez le formulaire.<br>C'est facile.</h2>
+                    <form method="post" id="contactForm" name="contactForm" novalidate="novalidate">
+                        <div class="row fl_name">
+                            <div class="f_name input_form">
+                                <input type="text" class="form-control" name="fname" id="fname" placeholder="Prénom">
+                            </div>
+                            <div class="l_name input_form">
+                                <input type="text" class="form-control" name="lname" id="lname" placeholder="Nom">
+                            </div>
+                        </div>
+                        <div class="input_form">
+                            <div>
+                                <input type="text" class="form-control" name="email" id="email" placeholder="Email">
+                            </div>
+                        </div>
+                        <div class="input_form">
+                            <div>
+                                <textarea class="form-control" name="message" id="message" cols="30" rows="7"
+                                    placeholder="Rédigez votre message"></textarea>
+                            </div>
+                        </div>
+                        <div>
+                            <a href="/"><button class="btn_envoyer_hover btn_envoyer">Envoyer !</button></a>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="contact_right_side">
+                    <h3>Très cher visiteur.</h3>
+                    <p>
+                        Merci d'avoir pris la peine de consulter mon site Web. <br>
+                        J'espère que nous nous reverrons très prochainement. <br>
+                        Au revoir !
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    </div>
+</body>
+
+</html>
